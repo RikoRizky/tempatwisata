@@ -19,7 +19,7 @@ dan merupakan pusat administratif Kecamatan Banda, Kabupaten Maluku Tengah, Malu
 <br>
 
 <h3>
-   Kerajaan Mataram Kuno 
+    Kerajaan Mataram Kuno 
 </h3>
 <img src="{{ url('/assets/mataramkuno.jpg') }}" class="img-fluid">
 <p>
