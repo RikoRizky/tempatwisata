@@ -15,8 +15,14 @@ class WisataSeeder extends Seeder
         //
         $wisata = ([
             ([
-                
-            ])
+                "id" => "123",
+                "name" => "pantai pandawa bali",
+                "location" => "bali",
+                "details" => "pantai",
+                "day-open" => "Monday",
+                "time-open" => "07.00 - 22.00",
+                "pricing" => "free",
+            ]),
             ]);
     }
 }
