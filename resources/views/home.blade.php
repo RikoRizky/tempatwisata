@@ -1,7 +1,7 @@
-@extends("tempalate")
+@extends("template")
 
 @section("title")
-Home
+
 @endsection
 
 @section("title")
@@ -151,19 +151,168 @@ Wangsa Isyana (929-1016 M). Pada 929 M, Kerajaan Mataram Kuno dipindahkan ke Jaw
 Menurut George Coedes dalam The Indianized states of Southeast Asia (1968).
 </p>
 <br>
+=======
+@section("content")
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        body{
+            margin: 70px;
+        }
+.lahan{
+  font-family: sans-serif;
+  background-color: black;
+  box-sizing: border-box;
+  display: flex;
+}
 
-<h3>
-    Raja Ampat
-</h3>
-<img src="{{ url('/assets/rajaampat.jpg') }}" class="img-fluid">
-<p>
-Kepulauan Raja Ampat adalah gugusan kepulauan yang berlokasi di 
-barat bagian Semenanjung Kepala Burung (Vogelkoop) Pulau Papua.
-</p>
-<br>
+.carousel {
+  width: 100%;
+  padding: 20px;
+  background-color: rgb(48, 48, 48);
+  border-radius: 25px;
+}
+.carousel-card {
+  width: 400px;
+  padding: 20px;
+  margin: 0 10px;
+  border: 2px solid white;
+  border-radius: 25px;
+  background-color: rgb(255, 255, 255, 0.3);
+  color: white;
+}
+.slick-slide img {
+  width: 100%;
+  height: 300px;
+}
+>>>>>>> 944b327e15a1fd0165a50bbd933028ac998148bd
 
-<br>
-<p>
-    Haloo Kunyuk
-</p>
+/* Customize the dots container */
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+/* Customize the individual dots */
+.slick-dots li {
+  margin: 0 5px;
+  list-style: none;
+}
+
+.slick-dots li button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: black;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+/* Remove the numbers next to the dots */
+.slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+}
+
+/* Style the active dot */
+.slick-dots li.slick-active button {
+  background-color: white;
+}
+    </style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/70c682a6d6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <h1>
+        Tempat Wisata
+    </h1>
+    <hr>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"
+    />
+    <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+
+    <script src="new.js"></script>
+
+    <div class="carousel lahan">
+      <div class="carousel-card">
+        <img src="https://media0.giphy.com/media/amrNGnZUeWhZC/giphy.gif" />
+        <p>ASH</p>
+      </div>
+      <div class="carousel-card">
+        <img
+          src="https://thumbs.gfycat.com/AdorableCreamyHarvestmouse-size_restricted.gif"
+        />
+        <p>PIKACHU</p>
+      </div>
+      <div class="carousel-card">
+        <img
+          src="https://i.kym-cdn.com/photos/images/original/001/158/600/5f9.gif"
+        />
+        <p>CHARIZARD</p>
+      </div>
+      <div class="carousel-card">
+        <img src="https://media1.giphy.com/media/6yjUEOHxZCev6/giphy.gif" />
+        <p>GREENINJA</p>
+      </div>
+      <div class="carousel-card">
+        <img src="https://i.imgur.com/SqcuMLU.gif" />
+        <p>ASH</p>
+      </div>
+    </div>
+  </body>
+  <script>
+    $(document).ready(function () {
+  $(".carousel").slick({
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 1000,
+    arrows: false,
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1367,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+});
+  </script>
+</html>
+
 @endsection

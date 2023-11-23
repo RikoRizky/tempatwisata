@@ -12,16 +12,10 @@
         <a href="{{ url('/') }}" class="nav-link">Home</a>
     </li>
     <li class="nav-item">
-        <a href="{{ url('profil') }}" class="nav-link">Profil</a>
-    </li>
-    <li class="nav-item">
-        <a href="{{ url('kontak') }}" class="nav-link">Kontak</a>
-    </li>
-    <li class="nav-item">
-        <a href="{{ url('data-pegawai') }}" class="nav-link">Data Pegawai</a>
+        <a href="{{ url('wisata') }}" class="nav-link">Data wisata</a>
     </li>
 </ul>
-<hr>
+
 <div class="container">
     <h1>@yield("title")</h1>
     <hr>

@@ -10,10 +10,16 @@ class AppController extends Controller
 {
     //
     public function home(){
-        $data = ([
-            "name" => "Ahmad",
-        ]);
-        return view("home",$data);
+        return view("home");
     }
     
+    public function wisata(){
+        $wisata = Wisata::get();
+
+        $data = ([
+            "wisata" => $wisata,
+        ]);
+
+        return view("wisata", $data);
+    }
 }
