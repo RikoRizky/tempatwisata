@@ -6,18 +6,18 @@ Data wisata
 
 @section("content")
 <a href="{{ url('tambah-wisata') }}" class="btn btn-primary mb-3">
-    Data wisata
+    Tambah Data
 </a>
 <table class="table table-bordered table-striped">
     <thead>
         <tr>
-            <th class="text-center"></th>
-            <th class="text-center"></th>
-            <th class="text-center"></th>
-            <th class="text-center"></th>
-            <th class="text-center"></th>
-            <th class="text-center"></th>
-            <th class="text-center"></th>
+            <th class="text-center">No.</th>
+            <th class="text-center">Nama</th>
+            <th class="text-center">Location</th>
+            <th class="text-center">Details</th>
+            <th class="text-center">Day Open</th>
+            <th class="text-center">Time Open</th>
+            <th class="text-center">Pricing</th>
             <th class="text-center"></th>
         </tr>
     </thead>
@@ -35,7 +35,7 @@ Data wisata
             <td class="text-center">{{ $data->details }}</td>
             <td class="text-center">
                 {{ $data->day-open }}, 
-                {{ date("d-m-Y",strtotime($data->time-open)) }}
+                {{ $data->time-open }}
             </td>
             <td class="text-center">{{ $data->pricing }}</td>
             <td class="text-center">
