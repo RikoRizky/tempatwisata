@@ -15,6 +15,16 @@ use App\Http\Controllers\AppController;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('welcome');
 });
+Route::get("/",[AppController::class,"home"]);
+Route::get("template",function(){return view('template'); });
 Route::get("wisata",[AppController::class,"wisata"]);
+
+Route::get('tambah',[AppController::class,'tambah']);
+Route::post("tambah",[AppController::class,"proses_tambah"]);
+
+Route::get("wisata/{id}/edit",[AppController::class,"edit"]);
+Route::post("edit",[AppController::class,"proses_edit"]);
+
+Route::get("data-pegawai/{id}/hapus",[AppController::class,"hapus_pegawai"]);

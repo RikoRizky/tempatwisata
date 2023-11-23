@@ -5,6 +5,8 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
+use App\Models\Wisata;
+
 class WisataSeeder extends Seeder
 {
     /**
@@ -24,5 +26,7 @@ class WisataSeeder extends Seeder
                 "pricing" => "free",
             ]),
             ]);
+
+            wisata::insert($wisata);
     }
 }

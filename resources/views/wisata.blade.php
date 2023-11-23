@@ -5,7 +5,7 @@ Data wisata
 @endsection
 
 @section("content")
-<a href="{{ url('tambah-wisata') }}" class="btn btn-primary mb-3">
+<a href="{{ url('tambah') }}" class="btn btn-primary mb-3">
     Tambah Data
 </a>
 <table class="table table-bordered table-striped">
@@ -17,7 +17,7 @@ Data wisata
             <th class="text-center">Details</th>
             <th class="text-center">Day Open</th>
             <th class="text-center">Time Open</th>
-            <th class="text-center">Pricing</th>
+            <th class="text-center">Price</th>
             <th class="text-center"></th>
         </tr>
     </thead>
@@ -33,17 +33,16 @@ Data wisata
             <td class="text-center">{{ $data->name }}</td>
             <td class="text-center">{{ $data->location }}</td>
             <td class="text-center">{{ $data->details }}</td>
+            <td class="text-center">{{ $data->day-open }}</td>
             <td class="text-center">
-                {{ $data->day-open }}, 
                 {{ $data->time-open }}
             </td>
             <td class="text-center">{{ $data->pricing }}</td>
             <td class="text-center">
-            <td class="text-center">
-                <a href="{{ url('data-pegawai/'.$data->id.'/edit') }}" class="btn btn-success btn-sm">
+                <a href="{{ url('wisata/'.$data->id.'/edit') }}" class="btn btn-success btn-sm">
                     Edit
                 </a>
-                <a href="{{ url('data-pegawai/'.$data->id.'/hapus') }}" 
+                <a href="{{ url('wisata/'.$data->id.'/hapus') }}" 
                 onclick="return confirm('Yakin Hapus {{ $data->nama }}.?')" 
                 class="btn btn-sm btn-danger">
                 Hapus
@@ -52,6 +51,5 @@ Data wisata
         </tr>
         @endforeach
     </tbody>
-</table>
-
+</table>    
 @endsection

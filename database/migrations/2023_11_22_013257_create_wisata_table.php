@@ -15,10 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string("name",255);
             $table->string("location",255);
-            $table->longText("details",);
-            $table->string("day-open",100);
-            $table->string("time-open",100);
-            $table->string("pricing",50);
+            $table->longText("details");
+            $table->string("day_open",100);
+            $table->string("time_open",100);
+            $table->string("price",50);
 
         });
     }

@@ -8,9 +8,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <style>
-        body{
-            margin: 70px;
-        }
+
 .lahan{
   font-family: sans-serif;
   background-color: black;
