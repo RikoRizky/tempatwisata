@@ -1,10 +1,32 @@
 @extends("template")
 
 @section("title")
+<hr>
 Tambah wisata
 @endsection
 
 @section("content")
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bangers&display=swap"
+        rel="stylesheet"
+        />
+        <script
+        src="https://kit.fontawesome.com/70c682a6d6.js"
+        crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
 <form action="{{url('tambah') }}" method="post">
     @csrf
     <div class="row mb-3">
@@ -49,4 +71,6 @@ Tambah wisata
     <button type="submit" class="btn btn-success">Tambah</button>
     <a class="btn btn-danger" href="{{ url ('wisata')}}">Cancel</a>
 </form>
+</body>
+</html>
 @endsection

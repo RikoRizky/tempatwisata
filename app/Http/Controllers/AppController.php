@@ -87,4 +87,8 @@ class AppController extends Controller
 
         return redirect("wisata/".$id."/edit");
     }
+    public function hapus($id){
+        Wisata::where("id",$id)->delete();
+        return redirect("wisata");
+    }
 }

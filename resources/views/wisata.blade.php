@@ -1,12 +1,34 @@
 @extends("template")
 
 @section("title")
+<hr>
 Data wisata
 @endsection
 
 @section("content")
-<a href="{{ url('tambah') }}" class="btn btn-primary mb-3">
-    Tambah Data
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bangers&display=swap"
+        rel="stylesheet"
+        />
+        <script
+        src="https://kit.fontawesome.com/70c682a6d6.js"
+        crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+    <a href="{{ url('tambah') }}" class="btn btn-primary mb-3">
+        Tambah Data
 </a>
 <table class="table table-bordered table-striped">
     <thead>
@@ -52,4 +74,6 @@ Data wisata
         @endforeach
     </tbody>
 </table>    
+</body>
+</html>
 @endsection
