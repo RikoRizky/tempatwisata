@@ -37,6 +37,7 @@
   width: 100%;
   height: 300px;
 }
+
 /* Customize the dots container */
 .slick-dots {
   display: flex;
@@ -105,28 +106,28 @@
 
     <div class="carousel lahan">
       <div class="carousel-card">
-        <img src="https://media0.giphy.com/media/amrNGnZUeWhZC/giphy.gif" />
-        <p>ASH</p>
+        <img src="{{ url('/assets/bandaneira.jpg') }}" />
+        <p>Banda Neira</p>
       </div>
       <div class="carousel-card">
         <img
-          src="https://thumbs.gfycat.com/AdorableCreamyHarvestmouse-size_restricted.gif"
+          src="{{ url('/assets/rajaampat.jpg') }}"
         />
-        <p>PIKACHU</p>
+        <p>Raja Ampat</p>
       </div>
       <div class="carousel-card">
         <img
-          src="https://i.kym-cdn.com/photos/images/original/001/158/600/5f9.gif"
+          src="{{ url('/assets/bali.jpeg') }}"
         />
-        <p>CHARIZARD</p>
+        <p>Bali</p>
       </div>
       <div class="carousel-card">
-        <img src="https://media1.giphy.com/media/6yjUEOHxZCev6/giphy.gif" />
-        <p>GREENINJA</p>
+        <img src="{{ url('/assets/borobudur.jpeg') }}" />
+        <p>Candi Borobudur</p>
       </div>
       <div class="carousel-card">
-        <img src="https://i.imgur.com/SqcuMLU.gif" />
-        <p>ASH</p>
+        <img src="{{ url('/assets/malioboro.jpeg') }}" />
+        <p>Malioboro</p>
       </div>
     </div>
   </body>
