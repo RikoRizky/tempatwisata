@@ -1,8 +1,7 @@
 @extends("template")
 
 @section("title")
-<hr>
-Edit wisata
+
 @endsection
 
 @section("content")
@@ -27,50 +26,56 @@ Edit wisata
         ></script>
     </head>
     <body>
+        <h1>Edit Data</h1>
+        <hr>
 <form action="{{ url('edit') }}" method="post">
     @csrf
     <input type="hidden" name="id" value="{{ $wisata->id }}">
     <div class="row mb-3">
         <div class="col">
-            <label for="Name" class="form-label">Name</label>
-            <input type="text" name="name" class="form-control" placeholder="Name Place" id="Name" value="{{ $destinations->name }}">
+            <label for="Name" class="form-label">Nama tempat</label>
+            <input type="text" name="name" class="form-control" placeholder="Nama tempat" id="Name" value="{{ $wisata->name }}">
         </div>
         <div class="col">
-            <label for="Day Open" class="form-label">Day Open</label>
-            <input type="text" name="day_open" class="form-control" placeholder="Day Open" id="Day Open" value="{{ $destinations->day_open }}">
-        </div>
-    </div>
-    <div class="row mb-3">
-        <div class="col">
-            <label for="Location" class="form-label">Location Place</label>
-            <input type="text"  name="location" class="form-control" placeholder="Location" id="Location" value="{{ $destinations->location }}">
-        </div>
-        <div class="col">
-            <label for="Time Open" class="form-label">Time Open</label>
-            <input type="text" name="time_open" class="form-control" placeholder="Time Open" id="Time Open" value="{{ $destinations->time_open }}">
+            <label for="Day Open" class="form-label">Hari buka</label>
+            <input type="text" name="day_open" class="form-control" placeholder="Hari buka" id="Day Open" value="{{ $wisata->day_open }}">
         </div>
     </div>
     <div class="row mb-3">
         <div class="col">
-            <label for="Details" class="form-label">Details</label>
-            <textarea name="details" class="form-control" id="Details" rows="2"  placeholder="More Details">{{ $destinations->details }}</textarea>
+            <label for="Location" class="form-label">Lokasi</label>
+            <input type="text"  name="location" class="form-control" placeholder="Lokasi" id="Location" value="{{ $wisata->location }}">
+        </div>
+        <div class="col">
+            <label for="Time Open" class="form-label">Jam buka</label>
+            <input type="text" name="time_open" class="form-control" placeholder="Waktu buka" id="Time Open" value="{{ $wisata->time_open }}">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col">
+            <label for="Details" class="form-label">Keterangan</label>
+            <textarea name="details" class="form-control" id="Details" rows="2"  placeholder="Keterangan">{{ $wisata->details }}</textarea>
         </div>
         <div class="col mb-3">
-            <label class="form-label">Price</label>
+            <label class="form-label">HTM</label>
             <div class="form-check">
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="price" id="paid" value="Paid" {{ ($destinations->price == "Paid") ? "checked" : ""}}>
-                    <label class="form-check-label" for="paid">Paid</label>
+                    <label class="form-check-label" for="price">
+                    <input class="form-check-input" type="radio" name="price" id="price" value="Bayar" {{ ($wisata->price == "Bayar") ? "checked" : "" }}>
+                        Bayar</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="price" id="free" value="Free" {{ ($destinations->price == "Free") ? "checked" : ""}}>
-                    <label class="form-check-label" for="free">Free</label>
+                    <label class="form-check-label" for="price">
+                    <input class="form-check-input" type="radio" name="price" id="price" value="Gratis" {{ ($wisata->price == "Gratis") ? "checked" : "" }}>
+                        Gratis</label>
                 </div>
             </div>
         </div>
     </div>
-    <button type="submit" class="btn btn-success">Save</button>
-    <a class="btn btn-danger" href="{{ url ('wisata')}}">Cancel</a>
+    <div class="btn float-end">
+    <button type="submit" class="btn btn-success">Simpan</button>
+    <a class="btn btn-danger" href="{{ url ('wisata')}}">kembali</a>
+</div>
 </form>
 </body>
 </html>

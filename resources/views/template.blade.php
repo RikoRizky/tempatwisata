@@ -27,7 +27,7 @@
 <nav class="navbar navbar-expand-lg navbar-social fonts fixed-top">
         <!-- Tautan Logo atau Judul -->
         <div class="container-fluid">
-            <a class="navbar-brand" href="{{ url('/') }}" ><h3>Wisata</h3></a>
+            <a class="navbar-brand" href="{{ url('/') }}" ><h3>Traveling</h3></a>
             <!-- Tombol Toggle (untuk tampilan responsif pada perangkat kecil) -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

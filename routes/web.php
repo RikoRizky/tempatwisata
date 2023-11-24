@@ -27,4 +27,4 @@ Route::post("tambah",[AppController::class,"proses_tambah"]);
 Route::get("wisata/{id}/edit",[AppController::class,"edit"]);
 Route::post("edit",[AppController::class,"proses_edit"]);
 
-Route::get("data-pegawai/{id}/hapus",[AppController::class,"hapus_pegawai"]);
+Route::get("wisata/{id}/hapus",[AppController::class,"hapus"]);

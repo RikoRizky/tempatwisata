@@ -1,8 +1,7 @@
 @extends("template")
 
 @section("title")
-<hr>
-Data wisata
+
 @endsection
 
 @section("content")
@@ -27,6 +26,8 @@ Data wisata
         ></script>
     </head>
     <body>
+        <h1>Data Wisata</h1>
+        <hr>    
     <a href="{{ url('tambah') }}" class="btn btn-primary mb-3">
         Tambah Data
 </a>
@@ -35,12 +36,12 @@ Data wisata
         <tr>
             <th class="text-center">No.</th>
             <th class="text-center">Nama</th>
-            <th class="text-center">Location</th>
-            <th class="text-center">Details</th>
-            <th class="text-center">Day Open</th>
-            <th class="text-center">Time Open</th>
-            <th class="text-center">Price</th>
-            <th class="text-center"></th>
+            <th class="text-center">Lokasi</th>
+            <th class="text-center">Keterangan</th>
+            <th class="text-center">Hari buka</th>
+            <th class="text-center">Jam buka</th>
+            <th class="text-center">HTM</th>
+            <th class="text-center">Fitur</th>
         </tr>
     </thead>
     <tbody>
@@ -51,15 +52,12 @@ Data wisata
         <?php $no++; ?>
         <tr>
         <td class="text-center">{{ $no }}</td>
-            <td class="text-center">{{ $data->id }}</td>
             <td class="text-center">{{ $data->name }}</td>
             <td class="text-center">{{ $data->location }}</td>
             <td class="text-center">{{ $data->details }}</td>
-            <td class="text-center">{{ $data->day-open }}</td>
-            <td class="text-center">
-                {{ $data->time-open }}
-            </td>
-            <td class="text-center">{{ $data->pricing }}</td>
+            <td class="text-center">{{ $data->day_open }}</td>
+            <td class="text-center">{{ $data->time_open }}</td>
+            <td class="text-center">{{ $data->price }}</td>
             <td class="text-center">
                 <a href="{{ url('wisata/'.$data->id.'/edit') }}" class="btn btn-success btn-sm">
                     Edit
