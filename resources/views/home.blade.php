@@ -90,7 +90,7 @@
 
   <body>
     <h1>
-        Saep Kingking
+        Tempat Wisata
     </h1>
     <hr>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
